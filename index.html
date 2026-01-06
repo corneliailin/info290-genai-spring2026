@@ -8,82 +8,93 @@
   <title>INFO 290: Fundamentals of Generative AI (Spring 2026)</title>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./style.css">
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-  <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Home</a>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#top">Home</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="main-nav">
+        <ul class="nav navbar-nav">
+          <li><a href="#description">Description</a></li>
+          <li><a href="#announcements">Announcements</a></li>
+          <li><a href="#instructional-team">Instructional Team</a></li>
+          <li><a href="#lecture">Weekly Schedule</a></li>
+          <li><a href="#grading">Grading</a></li>
+
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              Policies <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#ai-policy">Use of AI Chatbots</a></li>
+              <li><a href="#integrity">Academic Integrity</a></li>
+              <li><a href="#diversity">Diversity &amp; Inclusion</a></li>
+              <li><a href="#dsp">Accommodations</a></li>
+              <li><a href="#wellness">Wellness</a></li>
+            </ul>
+          </li>
+
+          <li><a href="https://edstem.org" target="_blank">Ed Discussion</a></li>
+        </ul>
+      </div>
+
     </div>
+  </nav>
 
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav">
-        <li><a href="#description">Description</a></li>
-        <li><a href="#announcements">Announcements</a></li>
-        <li><a href="#instructional-team">Instructional Team</a></li>
-        <li><a href="#lecture">Weekly Schedule</a></li>
-        <li><a href="#grading">Grading</a></li>
+  <!-- PAGE CONTENT -->
+  <div class="container" id="top">
 
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-            Policies <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#ai-policy">Use of AI Chatbots</a></li>
-            <li><a href="#integrity">Academic Integrity</a></li>
-            <li><a href="#diversity">Diversity &amp; Inclusion</a></li>
-            <li><a href="#dsp">Accommodations</a></li>
-            <li><a href="#wellness">Wellness</a></li>
-          </ul>
-        </li>
-
-        <li><a href="https://edstem.org" target="_blank">Ed Discussion</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<div class="container">
-
-
+    <!-- HERO -->
     <div class="jumbotron">
       <h1>Info 290:<br>Fundamentals of Generative AI</h1>
       <h3>Lecture: Thursdays, 11am - 2pm PST, South Hall, room: TBD</h3>
-      <!-- <h3>Office hours: Wed, 11am - 12pm PST</h3> -->
     </div>
 
+    <!-- DESCRIPTION -->
     <div class="panel panel-default" id="description">
       <div class="panel-heading">Description</div>
       <div class="panel-body">
-        <p>This course provides a foundation in the principles, architectures, and applications of generative artificial intelligence (GenAI).
+        <p>
+          This course provides a foundation in the principles, architectures, and applications of generative artificial intelligence (GenAI).
           It explores how large language models (LLMs) work by guiding students through the complete model lifecycle: from core building blocks like
           embedding representations, attention mechanisms, and transformer architectures to adaptation techniques including in-context learning,
-          prompt tuning, parameter-efficient fine-tuning (PEFT), and reinforcement learning (RL).</p>
+          prompt tuning, parameter-efficient fine-tuning (PEFT), and reinforcement learning (RL).
+        </p>
 
-        <p>The course also explores advanced topics such as retrieval-augmented generation (RAG), agentic reasoning systems, and multimodal learning
-          that extends beyond text to incorporate vision and other data modalities.</p>
+        <p>
+          The course also explores advanced topics such as retrieval-augmented generation (RAG), agentic reasoning systems, and multimodal learning
+          that extends beyond text to incorporate vision and other data modalities.
+        </p>
 
-        <p>Programming assignments, paper readings, and a team-based final project will help students develop the technical proficiency to design,
+        <p>
+          Programming assignments, paper readings, and a team-based final project will help students develop the technical proficiency to design,
           implement, and evaluate GenAI pipelines using Hugging Face, LangChain, and other open-source LLM APIs, while critically assessing their capabilities,
-          limitations, and responsible use in real-world applications.</p>
+          limitations, and responsible use in real-world applications.
+        </p>
 
         <p>All materials for this course will be posted on this page.</p>
       </div>
     </div>
 
-        <div class="panel panel-default" id="announcements">
+    <!-- ANNOUNCEMENTS -->
+    <div class="panel panel-default" id="announcements">
       <div class="panel-heading">Announcements</div>
       <div class="panel-body">
         <ul>
@@ -92,298 +103,270 @@
       </div>
     </div>
 
+    <!-- INSTRUCTIONAL TEAM (RESPONSIVE GRID) -->
     <div class="panel panel-default" id="instructional-team">
       <div class="panel-heading">Instructional Team</div>
       <div class="panel-body">
-        <div id="instructional_team">
-          <table class="table">
+        <div class="row text-center">
+
+          <div class="col-sm-6">
+            <img src="./pictures/Cornelia.jpeg" class="team-photo img-responsive center-block" alt="Cornelia Paulik">
+            <strong><a href="http://corneliailin.github.io">Cornelia Paulik</a></strong><br>
+            <em>Instructor</em><br><br>
+            Office Hours (online only):<br>
+            Wed 11 - 12 PM PST<br>
+            <a href="https://berkeley.zoom.us/my/cornelia.paulik" target="_blank">Join Zoom</a><br>
+            cornelia.paulik @ ischool.berkeley.edu
+          </div>
+
+          <div class="col-sm-6">
+            <img src="./pictures/Andrew.jpeg" class="team-photo img-responsive center-block" alt="Andrew Akuaku">
+            <strong><a href="https://www.ischool.berkeley.edu/people/andrew-akuaku">Andrew Akuaku</a></strong><br>
+            <em>Reader</em><br><br>
+            Office Hours:<br>
+            TBD<br>
+            aakuaku @ ischool.berkeley.edu
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGISTICS -->
+    <div class="panel panel-default" id="logistics">
+      <div class="panel-heading">Class Logistics</div>
+      <div class="panel-body">
+
+        <b>Students are expected to have:</b>
+        <ul>
+          <li>Graduate student status</li>
+          <li>Proficiency in Python programming, equivalent to INFO 206 A/B (including writing multi-file programs of ~200+ lines of code).</li>
+        </ul>
+
+        <b>Technical/Programming prerequisites:</b>
+        <ul>
+          <li>Python 3</li>
+          <li>JupyterLab / Jupyter Notebook workflows</li>
+          <li>Git and GitHub (clone, commit, push). Create an account <a href="https://github.com/join">here</a>.</li>
+        </ul>
+
+        <b>Textbook (required):</b>
+        <ul>
+          <li>
+            <a href="https://www.manning.com/books/build-a-large-language-model-from-scratch">
+              <em>Build a Large Language Model (From Scratch)</em>
+            </a>, Raschka S., Manning Publications, 2024 (SR)
+          </li>
+        </ul>
+
+        <b>Assignments and Final Project deliverables:</b>
+        <ul>
+          <li>Submitted via Gradescope</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <!-- LEARNING OUTCOMES -->
+    <div class="panel panel-default" id="learning-outcomes">
+      <div class="panel-heading">Learning Outcomes</div>
+      <div class="panel-body">
+        <p><strong>Upon successful completion of this course, students will be able to:</strong></p>
+        <ul>
+          <li><b>Analyze</b> the architectural components of LLMs (embeddings, attention, Transformer blocks).</li>
+          <li><b>Implement</b> GenAI systems (fine-tuning, PEFT, RLHF) and integrate RAG + tools using Hugging Face and LangChain.</li>
+          <li><b>Apply</b> prompt engineering and in-context learning for downstream tasks without extensive retraining.</li>
+          <li><b>Design</b> end-to-end GenAI pipelines (RAG, agents, multimodal inputs).</li>
+          <li><b>Evaluate</b> GenAI systems (performance, fairness, bias, safety).</li>
+          <li><b>Synthesize</b> insights from current research literature.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- WEEKLY SCHEDULE -->
+    <div class="panel panel-default" id="lecture">
+      <div class="panel-heading">
+        <h2 class="panel-title">Weekly Schedule <small>(subject to change)</small></h2>
+      </div>
+      <div class="panel-body">
+
+        <!-- IMPORTANT: makes wide tables usable on phones -->
+        <div class="table-responsive">
+          <table class="table plan">
             <thead>
-              <tr><th></th><th></th></tr>
+              <tr>
+                <th>Week</th>
+                <th>Date</th>
+                <th>Topic</th>
+                <th>Readings</th>
+                <th>Deadlines</th>
+              </tr>
             </thead>
+
             <tbody>
               <tr>
-                <td style="width:170px; text-align:center;">
-                  <img src="./pictures/Cornelia.jpeg" class="team-photo" alt="Cornelia Paulik"><br>
-                  <strong><a href="http://corneliailin.github.io">Cornelia Paulik</a></strong><br>
-                  <em>Instructor</em><br>
-                  Office Hours (online only):<br>
-                  Wed 11 - 12 PM PST<br>
-                  <a href="https://berkeley.zoom.us/my/cornelia.paulik" target="_blank">Join Zoom</a><br>
-                  cornelia.paulik @ ischool.berkeley.edu
-                </td>
+                <td colspan="5" class="small-section-header">Module 1: Foundations and data representations</td>
+              </tr>
+              <tr>
+                <td>Week 1</td>
+                <td>Jan 22</td>
+                <td>Introduction</td>
+                <td>SR, Chapter 1</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Week 2</td>
+                <td>Jan 26</td>
+                <td>Working with Text Data &amp; Attention Mechanisms</td>
+                <td>SR, Chapters 2–3</td>
+                <td><span style="color: green;">Assignment 1 distributed</span></td>
+              </tr>
 
-                <td style="width:170px; text-align:center;">
-                  <img src="./pictures/Andrew.jpeg" class="team-photo" alt="Andrew Akuaku"><br>
-                  <strong><a href="https://www.ischool.berkeley.edu/people/andrew-akuaku">Andrew Akuaku</a></strong><br>
-                  <em>Reader</em><br>
-                  Office Hours:<br>
-                  TBD<br>
-                  aakuaku @ ischool.berkeley.edu
+              <tr>
+                <td colspan="5" class="small-section-header">Module 2: Core model architecture</td>
+              </tr>
+              <tr>
+                <td>Week 3</td>
+                <td>Feb 5</td>
+                <td>Implementing &amp; Pre-training a Toy GPT-Style Model</td>
+                <td>SR, Chapters 4–5</td>
+                <td></td>
+              </tr>
+
+              <tr>
+                <td colspan="5" class="small-section-header">Module 3: Using pretrained LLMs</td>
+              </tr>
+              <tr>
+                <td>Week 4</td>
+                <td>Feb 12</td>
+                <td>In-Context Learning &amp; Prompt Tuning</td>
+                <td>[paper(s)]</td>
+                <td>
+                  <span style="color: red;">Assignment 1 due</span><br>
+                  <span style="color: green;">Assignment 2 distributed</span>
                 </td>
               </tr>
+
+              <tr>
+                <td colspan="5" class="small-section-header">Module 4: Adapting LLMs for downstream tasks</td>
+              </tr>
+              <tr>
+                <td>Week 5</td>
+                <td>Feb 19</td>
+                <td>Instruction Fine-Tuning</td>
+                <td>SR, Chapter 7; [paper(s)]</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Week 6</td>
+                <td>Feb 26</td>
+                <td>Parameter-Efficient Fine-Tuning (PEFT)</td>
+                <td>[paper(s)]</td>
+                <td>Final project proposal due</td>
+              </tr>
+              <tr>
+                <td>Week 7</td>
+                <td>Mar 5</td>
+                <td>Reinforcement Learning (RL)</td>
+                <td>[paper(s)]</td>
+                <td><span style="color: red;">Assignment 2 due</span></td>
+              </tr>
+
+              <tr>
+                <td colspan="5" class="small-section-header">Module 5: Beyond the foundation</td>
+              </tr>
+              <tr>
+                <td>Week 8</td>
+                <td>Mar 12</td>
+                <td>Retrieval-Augmented Generation (RAG)</td>
+                <td>[paper(s)]</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Week 9</td>
+                <td>Mar 19</td>
+                <td>Agents and Tool Use</td>
+                <td>[paper(s)]</td>
+                <td>Final project milestone due</td>
+              </tr>
+              <tr>
+                <td>Week 10</td>
+                <td>Apr 2</td>
+                <td>Multimodal Learning I</td>
+                <td>[paper(s)]</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Week 12</td>
+                <td>Apr 9</td>
+                <td>Multimodal Learning II</td>
+                <td>[paper(s)]</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Week 13</td>
+                <td>Apr 23</td>
+                <td>Bias, Safety, and Societal Considerations</td>
+                <td>[paper(s)]</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Week 14</td>
+                <td>Apr 30</td>
+                <td>Final Project</td>
+                <td></td>
+                <td>Final project report due<br>In-class poster presentation</td>
+              </tr>
+
             </tbody>
           </table>
-        </div> <!-- /#instructional_team -->
-      </div> <!-- /.panel-body -->
-    </div> <!-- /.panel -->
+        </div>
 
+      </div>
+    </div>
 
+    <!-- COMMUNICATION -->
+    <div class="panel panel-default" id="communication">
+      <div class="panel-heading">Communication Channel</div>
+      <div class="panel-body">
+        <p>
+          We will use Ed Discussion as the primary communication channel throughout the semester.<br>
+          Questions and comments related to your homework and projects (excluding code) are strongly encouraged.
+        </p>
+      </div>
+    </div>
 
-<div class="panel panel-default" id="logistics">
-  <div class="panel-heading">Class Logistics</div>
-  <div class="panel-body">
+    <!-- GRADING -->
+    <div class="panel panel-default" id="grading">
+      <div class="panel-heading">Grading</div>
+      <div class="panel-body">
 
-    <b>Students are expected to have:</b>
-    <ul>
-      <li>Graduate student status</li>
-      <li>Proficiency in Python programming, equivalent to INFO 206 A/B (including writing
-         multi-file programs of about 200+ lines of code, using functions and external libraries).</li>
-    </ul>
+        <p><strong>Your final course grade will be calculated as follows:</strong></p>
 
-    <b>Teachnical/Programming prerequisites:</b>
-    <ul>
-      <li>Python 3</li>
-      <li>JupyterLab/Jupyter Notebook workflows:</li>
-      <li>Git and GitHub, including: cloning repos, committing and pushing changes from the command line, managing repo. 
-        Create an account <a href="https://github.com/join">here</a>.
-      </li>
-    </ul>
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <tr><td>Assignments</td><td>30%</td></tr>
+            <tr><td>Final Project</td><td>50%</td></tr>
+            <tr><td>Paper Reading</td><td>6%</td></tr>
+            <tr><td>Participation</td><td>14%</td></tr>
+          </table>
+        </div>
 
-    <b>Textbook (required):</b>
-    <ul>
-      <li>
-        <a href="https://www.manning.com/books/build-a-large-language-model-from-scratch">
-          <em>Build a Large Language Model (From Scratch)</em>
-        </a>, Raschka S., Manning Publications, 2024 (hereafter SR)
-      </li>
-    </ul>
+        <p>
+          Final grades will be determined by computing the weighted average of assignments, final group project,
+          paper reading, and participation.
+        </p>
 
-    <b>Assignments and Final Project deliverables:</b>
-    <ul>
-      <li>Submitted via Gradescope</li>
-    </ul>
-  </div>
-</div>
+        <p>
+          Grading range for this course is: A for 93 or above, A- for 90 or above, B+ for 87 or above, B for 83 or above,
+          B- for 80 or above, C+ for 77 or above, C for 73 or above, C- for 70 and above, D+ for 67 and above,
+          D for 63 and above, D- for 60 and above, and F for 59 and below.
+        </p>
 
-<div class="panel panel-default" id="learning-outcomes">
-  <div class="panel-heading">Learning Outcomes</div>
-  <div class="panel-body">
+      </div>
+    </div>
 
-    <p><strong>Upon successful completion of this course, students will be able to:</strong></p>
-    <ul>
-      <li>
-        <b>Analyze</b> the architectural components of large language models (LLMs), including embedding representations, attention mechanisms, and Transformer blocks.
-      </li>
-      <li>
-        <b>Implement</b> generative AI systems by constructing language models from foundational components, applying fine-tuning strategies (instruction tuning, parameter-efficient fine-tuning, and reinforcement learning from human feedback), and integrating retrieval-augmented generation (RAG) pipelines and external tools using frameworks such as Hugging Face and LangChain.
-      </li>
-      <li>
-        <b>Apply</b> prompt engineering and in-context learning techniques to adapt and optimize pretrained models for diverse downstream tasks without extensive retraining.
-      </li>
-      <li>
-        <b>Design</b> end-to-end GenAI pipelines that incorporate retrieval-augmented generation, agentic reasoning, and multimodal inputs.
-      </li>
-      <li>
-        <b>Evaluate</b> generative AI systems by assessing technical performance, fairness, potential biases, and safety considerations.
-      </li>
-      <li>
-        <b>Synthesize</b> insights from current research literature to inform the development and critical assessment of GenAI applications.
-      </li>
-    </ul>
-
-  </div>
-</div>
-
-
-<div class="panel panel-default" id="lecture">
-  <div class="panel-heading">
-    <h2 class="panel-title">Weekly Schedule <small>(subject to change)</small></h2>
-  </div>
-
-  <div class="panel-body">
-
-    <table class="plan">
-      <thead>
-        <tr>
-          <th>Week</th>
-          <th>Date</th>
-          <th>Topic</th>
-          <th>Readings</th>
-          <th>Deadlines (10:59 am PST, lecture day)</th>
-        </tr>
-      </thead>
-
-      <tbody>
-
-        <tr>
-          <td colspan="5" class="small-section-header">Module 1: Foundations and data representations</td>
-        </tr>
-
-        <tr>
-          <td>Week 1</td>
-          <td>Jan 22</td>
-          <td>Introduction</td>
-          <td>SR, Chapter 1</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>Week 2</td>
-          <td>Jan 26</td>
-          <td>Working with Text Data &amp; Attention Mechanisms</td>
-          <td>SR, Chapters 2–3</td>
-          <td><span style="color: green;">Assignment 1 distributed</span></td>
-        </tr>
-
-        <tr>
-          <td colspan="5" class="small-section-header">Module 2: Core model architecture</td>
-        </tr>
-
-        <tr>
-          <td>Week 3</td>
-          <td>Feb 5</td>
-          <td>Implementing &amp; Pre-training a Toy GPT-Style Model</td>
-          <td>SR, Chapters 4–5</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td colspan="5" class="small-section-header">Module 3: Using pretrained LLMs</td>
-        </tr>
-
-        <tr>
-          <td>Week 4</td>
-          <td>Feb 12</td>
-          <td>In-Context Learning &amp; Prompt Tuning</td>
-          <td>[paper(s)]</td>
-          <td><span style="color: red;">Assignment 1 due</span><br><span style="color: green;">Assignment 2 distributed</span></td>
-        </tr>
-
-        <tr>
-          <td colspan="5" class="small-section-header">Module 4: Adapting LLMs for downstream tasks</td>
-        </tr>
-
-        <tr>
-          <td>Week 5</td>
-          <td>Feb 19</td>
-          <td>Instruction Fine-Tuning</td>
-          <td>SR, Chapter 7; [paper(s)]</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>Week 6</td>
-          <td>Feb 26</td>
-          <td>Parameter-Efficient Fine-Tuning (PEFT)</td>
-          <td>[paper(s)]</td>
-          <td>Final project proposal due</td>
-        </tr>
-
-        <tr>
-          <td>Week 7</td>
-          <td>Mar 5</td>
-          <td>Reinforcement Learning (RL)</td>
-          <td>[paper(s)]</td>
-          <td><span style="color: red;">Assignment 2 due</span></td>
-        </tr>
-
-        <tr>
-          <td colspan="5" class="small-section-header">Module 5: Beyond the foundation</td>
-        </tr>
-
-        <tr>
-          <td>Week 8</td>
-          <td>Mar 12</td>
-          <td>Retrieval-Augmented Generation (RAG)</td>
-          <td>[paper(s)]</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>Week 9</td>
-          <td>Mar 19</td>
-          <td>Agents and Tool Use</td>
-          <td>[paper(s)]</td>
-          <td>Final project milestone due</td>
-        </tr>
-
-        <tr>
-          <td>Week 10</td>
-          <td>Apr 2</td>
-          <td>Multimodal Learning I</td>
-          <td>[paper(s)]</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>Week 12</td>
-          <td>Apr 9</td>
-          <td>Multimodal Learning II</td>
-          <td>[paper(s)]</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>Week 13</td>
-          <td>Apr 23</td>
-          <td>Bias, Safety, and Societal Considerations</td>
-          <td>[paper(s)]</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>Week 14</td>
-          <td>Apr 30</td>
-          <td>Final Project</td>
-          <td></td>
-          <td>Final project report due <br> Final project in-class poster presentation</td>
-        </tr>
-
-      </tbody>
-    </table>
-
-  </div>
-</div>
-
-<div class="panel panel-default" id="communication">
-  <div class="panel-heading">Communication Channel
-  </div>
-
-  <div class="panel-body">
-    <p>
-      We will use Ed Discussion as the primary communication channel throughout the semester. <br>
-      Questions and comments related to your homework and projects (excluding code) are strongly encouraged.
-    </p>
-  </div>
-</div>
-
-
-<div class="panel panel-default" id="grading">
-  <div class="panel-heading">Grading</div>
-  <div class="panel-body">
-
-    <p><strong>Your final course grade will be calculated as follows:</strong></p>
-
-    <table class="table table-striped">
-      <tr><td>Assignments</td><td>30%</td></tr>
-      <tr><td>Final Project</td><td>50%</td></tr>
-      <tr><td>Paper Reading</td><td>6%</td></tr>
-      <tr><td>Participation</td><td>14%</td></tr>
-    </table>
-
-    <p>
-      Final grades will be determined by computing the weighted average of assignments, final group project,
-      paper reading, and participation.
-    </p>
-
-    <p>
-      Grading range for this course is: A for 93 or above, A- for 90 or above, B+ for 87 or above, B for 83 or above, B- for 80 or above, C+ for 77 or above, C for 73 or above, C- for 70 and above, D+ for 67 and above, D for 63 and above, D- for 60 and above, and F for 59 and below.
-    </p>
-
-  </div>
-</div>
-
-
+<!-- ASSIGNMENTS / FINAL PROJECT / PARTICIPATION -->
 <div class="panel panel-default" id="assignments-project">
   <div class="panel-heading">Assignments, Final Project, and Participation</div>
   <div class="panel-body">
@@ -391,9 +374,9 @@
     <b>Assignments</b>
     <p>
       Students will complete two individual assignments (each worth 15% of the final grade) designed to connect
-      lecture concepts with data-driven, real-world applications. Late submissions are accepted up to three days past the deadline, with a <b>10% absolute deduction per day</b>.
-Assignments will be posted on this website and
-      submitted through Gradescope.
+      lecture concepts with data-driven, real-world applications. Late submissions are accepted up to three days
+      past the deadline, with a <b>10% absolute deduction per day</b>. Assignments will be posted on this website
+      and submitted through Gradescope.
     </p>
 
     <b>Final Project</b>
@@ -401,6 +384,7 @@ Assignments will be posted on this website and
       The final project is designed to help you develop practical skills in building generative AI pipelines for
       real-world applications. You will work in teams of <b>3–4 students</b>.
     </p>
+
     <p>
       Project grades will be determined based on the proposal, milestone, final report, and poster presentation,
       with adjustments made for group size and individual contributions. The final project accounts for <b>50%</b>
@@ -435,7 +419,7 @@ Assignments will be posted on this website and
   </div>
 </div>
 
-
+<!-- POLICIES -->
 <div class="panel panel-default" id="ai-policy">
   <div class="panel-heading">Use of AI Chatbots</div>
   <div class="panel-body">
@@ -485,7 +469,6 @@ Assignments will be posted on this website and
   </div>
 </div>
 
-
 <div class="panel panel-default" id="diversity">
   <div class="panel-heading">Diversity and Inclusion</div>
   <div class="panel-body">
@@ -532,7 +515,6 @@ Assignments will be posted on this website and
   </div>
 </div>
 
-
 <div class="panel panel-default" id="wellness">
   <div class="panel-heading">Wellness</div>
   <div class="panel-body">
@@ -553,6 +535,17 @@ Assignments will be posted on this website and
 
 
   </div> <!-- /.container -->
+
+  <!-- Close the mobile menu after tapping a link -->
+  <script>
+    $(function () {
+      $('.navbar-collapse a').click(function () {
+        if ($('.navbar-toggle').is(':visible')) {
+          $('.navbar-collapse').collapse('hide');
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
